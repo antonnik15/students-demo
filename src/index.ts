@@ -4,7 +4,7 @@ import {productsRoute} from "./routes/products-route";
 import {addressesRouter} from "./routes/addresses-route";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser({}))
 app.use('/products', productsRoute)
